@@ -105,3 +105,16 @@ chmod +x modules/functions.sh
 # Run the reminder application
 ./app/reminder.sh
 EOF
+
+# Make all .sh files executable
+    chmod +x $dir_name/startup.sh
+    chmod +x $dir_name/app/reminder.sh
+    chmod +x $dir_name/modules/functions.sh
+
+    echo "Environment created successfully!"
+    echo "Directory: $dir_name"
+    echo "To test the application, run: cd $dir_name && ./startup.sh"
+
+else
+    echo "Please enter a valid name"
+fi
