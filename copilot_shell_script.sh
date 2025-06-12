@@ -18,3 +18,18 @@ if [ -z "$reminder_dir" ]; then
     exit 1
 fi
 
+#fetch the config file and store it in config_file
+config_file=$reminder_dir/config/config.env
+
+#check if config file was created 
+if [ ! -f "$config_file" ]; then
+    echo "Config file not found."
+    exit 1
+fi
+
+# this finds the assignment in the config file and cahnges in the the one entered by the user
+sed -i '' "s/^ASSIGNMENT=.*/ASSIGNMENT=\"$new_name\"/" "$config_file"
+
+echo "Name changed to: $new_name"
+
+./$reminder_dir/startup.sh
