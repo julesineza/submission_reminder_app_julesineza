@@ -77,3 +77,31 @@ Diana, Shell Advanced, submitted
 Eve, Shell Navigation, not submitted
 Frank, Git, not submitted
 EOF
+
+# Create config directory
+    mkdir $dir_name/config
+    
+    # Creating the config.env file and populating it
+    cat > "$dir_name/config/config.env" << 'EOF'
+# This is the config file
+ASSIGNMENT="Shell Navigation"
+DAYS_REMAINING=2
+EOF
+
+    # Creating the startup.sh script
+    cat > "$dir_name/startup.sh" << 'EOF'
+#!/bin/bash
+
+# Change to the application directory
+cd "$(dirname "$0")"
+
+# Source the configuration
+source config/config.env
+
+# Make all .sh files executable
+chmod +x app/reminder.sh
+chmod +x modules/functions.sh
+
+# Run the reminder application
+./app/reminder.sh
+EOF
