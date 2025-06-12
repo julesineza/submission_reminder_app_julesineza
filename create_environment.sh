@@ -54,3 +54,26 @@ function check_submissions {
     done < <(tail -n +2 "$submissions_file") # Skip the header
 }
 EOF
+
+# Create assets directory
+    mkdir $dir_name/assets
+    
+    # Creating the submissions.txt with at least 5 additional student records
+    cat > "$dir_name/assets/submissions.txt" << 'EOF'
+student, assignment, submission status
+Chinemerem, Shell Navigation, not submitted
+Chiagoziem, Git, submitted
+Divine, Shell Navigation, not submitted
+Anissa, Shell Basics, submitted
+Jules, Shell Advanced, submitted
+Ishigami, Shell Navigation, not submitted
+Kuwabara, Git, submitted
+Hanji, Shell Navigation, not submitted
+Yamato, Shell Navigation, submitted
+Alice, Shell Navigation, not submitted
+Bob, Git, submitted
+Charlie, Shell Basics, not submitted
+Diana, Shell Advanced, submitted
+Eve, Shell Navigation, not submitted
+Frank, Git, not submitted
+EOF
