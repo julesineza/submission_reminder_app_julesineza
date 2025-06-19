@@ -2,6 +2,27 @@
 
 This project contains two main shell scripts that help manage student assignment submissions.
 
+How to run this App
+------------------------------------------------
+
+1. First, give permission to run the files by typing this in the terminal:
+chmod +x create_environment.sh
+chmod +x copilot_shell_script.sh
+
+2. Then run the first script to set up everything:
+./create_environment.sh
+It will ask for your name and create a folder with all the files inside.
+
+3. After that, you can run the second script to change the assignment name:
+./copilot_shell_script.sh
+
+4. If you want to run the app again later, go inside the folder and run:
+./startup.sh
+If it says permission denied, use:
+chmod +x startup.sh
+
+
+
 The first script is called  create_environment.sh.
 -------------------------------------------------- 
 
@@ -25,3 +46,5 @@ To use the project, first run create_environment.sh and enter your name to set u
 This project is useful for beginners to learn how to use shell scripting for file management, editing files, and running small programs from the command line. It shows how scripts can interact by creating folders, writing files, updating text inside files, and running other scripts automatically.
 
 If you follow the instructions step by step, you should be able to create the environment and run the submission reminders successfully.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
